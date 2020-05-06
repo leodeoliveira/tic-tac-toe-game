@@ -1,0 +1,86 @@
+<div>
+  <h2>Tic tac toe</h2>
+  
+  <div class="main" *ngIf="startGame">
+    <a href="#" 
+       class="btn"
+       (click)="initGame()">
+       Play
+    </a>
+  </div>
+
+  <div *ngIf="showTable">
+    <ul>
+      <li class="border-bottom border-right"
+      	[class.img-x]="showX(0,0)"
+      	[class.img-o]="showO(0,0)"
+      	[class.color-winner]="showWinner(0,0)"
+      	(click)="play(0,0)">
+      </li>
+      <li class="border-bottom border-right"
+      	[class.img-x]="showX(0,1)"
+      	[class.img-o]="showO(0,1)"
+      	[class.color-winner]="showWinner(0,1)"
+      	(click)="play(0,1)">
+      </li>
+      <li class="border-bottom"
+      	[class.img-x]="showX(0,2)"
+      	[class.img-o]="showO(0,2)"
+      	[class.color-winner]="showWinner(0,2)"
+      	(click)="play(0,2)">
+      </li>
+
+      <li class="border-bottom border-right"
+      	[class.img-x]="showX(1,0)"
+      	[class.img-o]="showO(1,0)"
+      	[class.color-winner]="showWinner(1,0)"
+      	(click)="play(1,0)">
+      </li>
+      <li class="border-bottom border-right"
+      	[class.img-x]="showX(1,1)"
+      	[class.img-o]="showO(1,1)"
+      	[class.color-winner]="showWinner(1,1)"
+      	(click)="play(1,1)">
+      </li>
+      <li class="border-bottom"
+      	[class.img-x]="showX(1,2)"
+      	[class.img-o]="showO(1,2)"
+      	[class.color-winner]="showWinner(1,2)"
+      	(click)="play(1,2)">
+      </li>
+
+      <li class="border-right"
+      	[class.img-x]="showX(2,0)"
+      	[class.img-o]="showO(2,0)"
+      	[class.color-winner]="showWinner(2,0)"
+      	(click)="play(2,0)">
+      </li>
+      <li class="border-right"
+      	[class.img-x]="showX(2,1)"
+      	[class.img-o]="showO(2,1)"
+      	[class.color-winner]="showWinner(2,1)"
+      	(click)="play(2,1)">
+      </li>
+      <li
+      	[class.img-x]="showX(2,2)"
+      	[class.img-o]="showO(2,2)"
+      	[class.color-winner]="showWinner(2,2)"
+      	(click)="play(2,2)">
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="endGame">
+    <span>
+    <p *ngIf="player==1">You loose...</p>
+    <p *ngIf="player==0">The game ended as drawn...</p>
+    <p *ngIf="player==2">You won!</p>
+    <br />
+    <a href="#" 
+         class="botao"
+         (click)="newGame()">
+         Play again
+      </a>
+    </span>
+  </div>
+</div>

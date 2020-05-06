@@ -3,7 +3,7 @@
 A simple TicTacToe Game using Angular 9.
 
 
-
+![Screenshot](screenshot.png)
 
 
 
